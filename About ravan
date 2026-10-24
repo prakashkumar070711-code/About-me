@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAVAN KI DUNIYA</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --gold: #e4b744;
+    --light-gold: #ffe39a;
+    --black: #050505;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+    border-bottom: 1px solid var(--gold);
+    background: #050505;
+}
+
+.logo {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 23px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 22px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 530px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+    background:
+        radial-gradient(ellipse at 25% 50%,
+        #49330c 0%, #171006 25%, #050505 65%);
+}
+
+.profile-circle {
+    width: 270px;
+    height: 270px;
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 35px #d4a52a40;
+    background: linear-gradient(145deg, #231a08, #050505);
+}
+
+.crown {
+    font-size: 65px;
+    color: var(--gold);
+}
+
+.initial {
+    font-size: 85px;
+    font-family: Georgia, serif;
+    color: var(--light-gold);
+    text-shadow: 0 0 20px #d4a52a70;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 520px;
+}
+
+.welcome {
+    letter-spacing: 7px;
+    color: var(--gold);
+    font-size: 15px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 9vw, 90px);
+    color: var(--gold);
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    letter-spacing: 8px;
+}
+
+.tagline {
+    margin: 25px 0;
+    color: #ddd;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    margin: 8px;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn.gold {
+    background: linear-gradient(120deg, var(--light-gold), #c99525);
+    color: black;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 22px #e4b74435;
+}
+
+section {
+    width: 88%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    padding: 35px;
+    border: 1px solid #a9822c;
+    border-radius: 12px;
+    background: linear-gradient(130deg, #101010, #050505);
+}
+
+h2 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #ddd;
+    line-height: 1.9;
+}
+
+.values {
+    border-left: 1px solid #71551b;
+    padding-left: 35px;
+}
+
+.value {
+    margin: 15px 0 25px;
+}
+
+.value strong {
+    display: block;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    margin-bottom: 7px;
+    font-size: 19px;
+}
+
+.value span {
+    color: #ddd;
+}
+
+.social-heading {
+    text-align: center;
+    margin: 50px 0 28px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.social-card {
+    padding: 25px 12px;
+    text-align: center;
+    border: 1px solid #b48a2c;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #121212, #050505);
+    transition: .3s;
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px #e4b74420;
+}
+
+.social-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 18px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+}
+
+.social-card h3 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+.social-card p {
+    color: #ccc;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.social-card .btn {
+    font-size: 12px;
+    padding: 11px 14px;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 65px;
+    border-top: 1px solid #8d6a22;
+    color: #b7b7b7;
+    line-height: 2;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+@media (max-width: 750px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .profile-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .values {
+        border-left: none;
+        border-top: 1px solid #71551b;
+        padding: 25px 0 0;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subtitle {
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">♛ RAVAN KI DUNIYA</div>
+
+    <div>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#social">SOCIAL</a>
+    </div>
+</nav>
+
+<header class="hero" id="home">
+
+    <div class="profile-circle">
+        <div class="crown">♛</div>
+        <div class="initial">R</div>
+    </div>
+
+    <div class="hero-text">
+        <p class="welcome">WELCOME TO</p>
+
+        <h1>RAVAN</h1>
+
+        <p class="subtitle">♛ KI DUNIYA ♛</p>
+
+        <p class="tagline">
+            My World. My Rules. My Journey.
+        </p>
+
+        <a class="btn gold" href="#about">♟ ABOUT ME</a>
+
+        <a class="btn" href="#social">➤ CONNECT</a>
+    </div>
+
+</header>
+
+<section class="about" id="about">
+
+    <div>
+        <h2>♟ ABOUT ME</h2>
+
+        <p>
+            I am RAVAN.<br>
+            I believe in hard work, self-respect
+            and never giving up. I create my own
+            opportunities and live life on my own terms.
+            <br>
+            Welcome to my world.
+        </p>
+    </div>
+
+    <div class="values">
+
+        <div class="value">
+            <strong>◎ FOCUS</strong>
+            <span>On My Goals</span>
+        </div>
+
+        <div class="value">
+            <strong>♛ ATTITUDE</strong>
+            <span>King Mentality</span>
+        </div>
+
+        <div class="value">
+            <strong>⚡ BELIEVE</strong>
+            <span>In Yourself</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="social">
+
+    <h2 class="social-heading">♛ CONNECT WITH ME ♛</h2>
+
+    <div class="social-grid">
+
+        <div class="social-card">
+            <div class="social-icon">▶</div>
+            <h3>YOUTUBE</h3>
+            <p>RAVAN OFFICIAL</p>
+            <a class="btn gold"
+               href="https://www.youtube.com/@RAVAN-xxpk"
+               target="_blank" rel="noopener">
+               VISIT CHANNEL
+            </a>
+        </div>
+
+        <div class="social-card">
+            <div class="social-icon">◎</div>
+            <h3>INSTAGRAM</h3>
+            <p>@ravan_official</p>
+            <a class="btn gold"
+               href="https://www.instagram.com/"
+               target="_blank" rel="noopener">
+               FOLLOW ME
+            </a>
+        </div>
+
+        <div class="social-card">
+            <div class="social-icon">✆</div>
+            <h3>WHATSAPP</h3>
+            <p>Chat With Me</p>
+            <a class="btn gold"
+               href="https://wa.me/919153854944"
+               target="_blank" rel="noopener">
+               MESSAGE ME
+            </a>
+        </div>
+
+        
+            
+          
+
+</section>
+
+<footer>
+    <span>♛ RAVAN KI DUNIYA ♛</span>
+    <br>
+    © <span id="year"></span> RAVAN — All Rights Reserved
+    <br>
+    Made with ♥ by RAVAN
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
